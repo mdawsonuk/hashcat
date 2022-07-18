@@ -55,7 +55,7 @@ jobs:
           SHARED: ${{ matrix.shared }}
         run: make
       - name: Testing hashcat -I
-        run: chmod +x && ./hashcat -I
+        run: chmod +x ./hashcat && ./hashcat -I
       - name: Generate artifacts
         uses: actions/upload-artifact@v3
         with:
